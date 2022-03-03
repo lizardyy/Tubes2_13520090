@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TUBES-SEM2\\Tubes2_13520090\\src\\src.csproj": {}
+    "D:\\A - INFORMATIKA\\Semester 4\\STIMA\\TUBES\\Tubes2\\Tubes2_13520090\\src\\src.csproj": {}
   },
   "projects": {
-    "D:\\TUBES-SEM2\\Tubes2_13520090\\src\\src.csproj": {
+    "D:\\A - INFORMATIKA\\Semester 4\\STIMA\\TUBES\\Tubes2\\Tubes2_13520090\\src\\src.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TUBES-SEM2\\Tubes2_13520090\\src\\src.csproj",
+        "projectUniqueName": "D:\\A - INFORMATIKA\\Semester 4\\STIMA\\TUBES\\Tubes2\\Tubes2_13520090\\src\\src.csproj",
         "projectName": "src",
-        "projectPath": "D:\\TUBES-SEM2\\Tubes2_13520090\\src\\src.csproj",
+        "projectPath": "D:\\A - INFORMATIKA\\Semester 4\\STIMA\\TUBES\\Tubes2\\Tubes2_13520090\\src\\src.csproj",
         "packagesPath": "C:\\Users\\mahesa lizardy\\.nuget\\packages\\",
-        "outputPath": "D:\\TUBES-SEM2\\Tubes2_13520090\\src\\obj\\",
+        "outputPath": "D:\\A - INFORMATIKA\\Semester 4\\STIMA\\TUBES\\Tubes2\\Tubes2_13520090\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mahesa lizardy\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -5,6 +5,7 @@ namespace src
     {
         string[] files;
         string[] dirs;
+        string fileSearch; // file yang dicari
         public Form1()
         {
             InitializeComponent();
@@ -27,8 +28,7 @@ namespace src
 
         private void gViewer1_Load(object sender, EventArgs e)
         {
-            System.Windows.Forms.Form form = new System.Windows.Forms.Form();
-            //create a viewer object 
+            
 
         }
 
@@ -40,11 +40,11 @@ namespace src
 
         private void button2_Click(object sender, EventArgs e)
         {
+            fileSearch = textBox2.Text; // file yang akan dicari
+
             if (radioButton1.Checked)
             {
-                // implement BFS searh
-                //MessageBox.Show("Choose BFS");
-
+                // implement BFS search
                 foreach (string file in files)
                 {
                     listBox1.Items.Add(Path.GetFileName(file));
@@ -58,27 +58,17 @@ namespace src
                 //create a graph object 
                 Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
                 //create the graph content 
-                string parent = textBox1.Text;
-                /* foreach (string file in files)
-                 {
-                     graph.AddEdge(parent, file).Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
-                 }*/
+                
+                // mengambil nama parent
+                string parent = Path.GetFileName(textBox1.Text);
 
-                graph.AddEdge("B", "C");
-                graph.AddEdge("A", "C").Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
-                graph.FindNode("A").Attr.FillColor = Microsoft.Msagl.Drawing.Color.Magenta;
-                graph.FindNode("B").Attr.FillColor = Microsoft.Msagl.Drawing.Color.MistyRose;
-                Microsoft.Msagl.Drawing.Node c = graph.FindNode("C");
-                c.Attr.FillColor = Microsoft.Msagl.Drawing.Color.PaleGreen;
-                c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Diamond;
-                this.gViewer1.Graph = graph;
-                //bind the graph to the viewer 
-                /*viewer.Graph = graph;
-                //associate the viewer with the form 
-                form.SuspendLayout();
-                viewer.Dock = System.Windows.Forms.DockStyle.Fill;
-                form.Controls.Add(viewer);
-                form.ResumeLayout();*/
+                // menambahkan edge parent ke child
+                foreach (string file in listBox1.Items)
+                {
+                    graph.AddEdge(parent, file).Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
+                }
+
+                this.gViewer1.Graph = graph; //untuk menampilkan graph
             }
             if (radioButton2.Checked)
             {
@@ -93,6 +83,11 @@ namespace src
                     listBox1.Items.Add(Path.GetFileName(dir));
                 }
             }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
