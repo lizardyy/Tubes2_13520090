@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "jco4tpeBMJOTHerJarP0sz+nLwvyeXyw5yzfC5kc7TH668d8bnCU4OwYi9IWekg8wKRsZc10U5D//0p3dPCdIQ==",
+  "success": true,
+  "projectFilePath": "D:\\A - INFORMATIKA\\Semester 4\\STIMA\\TUBES\\Tubes2\\Tubes2_13520090\\Tubes2_13520090\\Tubes2_13520090.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mahesa lizardy\\.nuget\\packages\\automaticgraphlayout\\1.1.11\\automaticgraphlayout.1.1.11.nupkg.sha512",
+    "C:\\Users\\mahesa lizardy\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.11\\automaticgraphlayout.drawing.1.1.11.nupkg.sha512",
+    "C:\\Users\\mahesa lizardy\\.nuget\\packages\\automaticgraphlayout.graphviewergdi\\1.1.11\\automaticgraphlayout.graphviewergdi.1.1.11.nupkg.sha512",
+    "C:\\Users\\mahesa lizardy\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.11\\automaticgraphlayout.wpfgraphcontrol.1.1.11.nupkg.sha512"
+  ],
+  "logs": []
+}
