@@ -19,24 +19,12 @@ namespace src
             {
                 textBox1.Text = dialog.SelectedPath;
 
-                listBox1.Items.Clear();
+                testing.Items.Clear();
                 files = Directory.GetFiles(dialog.SelectedPath);
                 dirs = Directory.GetDirectories(dialog.SelectedPath);
             }
         }
 
-
-        private void gViewer1_Load(object sender, EventArgs e)
-        {
-            
-
-        }
-
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -47,11 +35,11 @@ namespace src
                 // implement BFS search
                 foreach (string file in files)
                 {
-                    listBox1.Items.Add(Path.GetFileName(file));
+                    testing.Items.Add(Path.GetFileName(file));
                 }
                 foreach (string dir in dirs)
                 {
-                    listBox1.Items.Add(Path.GetFileName(dir));
+                    testing.Items.Add(Path.GetFileName(dir));
                 }
 
                 Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
@@ -63,7 +51,7 @@ namespace src
                 string parent = Path.GetFileName(textBox1.Text);
 
                 // menambahkan edge parent ke child
-                foreach (string file in listBox1.Items)
+                foreach (string file in testing.Items)
                 {
                     graph.AddEdge(parent, file).Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
                 }
@@ -76,18 +64,14 @@ namespace src
                 MessageBox.Show("Choose DFS");
                 foreach (string file in files)
                 {
-                    listBox1.Items.Add(Path.GetFileName(file));
+                    testing.Items.Add(Path.GetFileName(file));
                 }
                 foreach (string dir in dirs)
                 {
-                    listBox1.Items.Add(Path.GetFileName(dir));
+                    testing.Items.Add(Path.GetFileName(dir));
                 }
             }
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

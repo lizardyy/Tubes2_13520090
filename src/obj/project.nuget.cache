@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "1xWjr3roHEJ2M5m8H29jHDs+qHwc4Bk1DuNBt9pOCXZOmXdNAou9Bfff+zdf/tl4/N/LCbfrwH/1MZL1sovwEA==",
+  "dgSpecHash": "E4UZFy/sjHU+M8ndmKT/Bttcuz8sYDIXBINRcgwH7Vojl+Ep9H3X6X9Ps3Ku6g0NEOvXz+NcS+G3fCo/V2DrOw==",
   "success": true,
-  "projectFilePath": "D:\\A - INFORMATIKA\\Semester 4\\STIMA\\TUBES\\Tubes2\\Tubes2_13520090\\src\\src.csproj",
+  "projectFilePath": "D:\\TUBES-SEM2\\Tubes2_13520090\\src\\src.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mahesa lizardy\\.nuget\\packages\\automaticgraphlayout\\1.1.11\\automaticgraphlayout.1.1.11.nupkg.sha512",
     "C:\\Users\\mahesa lizardy\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.11\\automaticgraphlayout.drawing.1.1.11.nupkg.sha512",
     "C:\\Users\\mahesa lizardy\\.nuget\\packages\\automaticgraphlayout.graphviewergdi\\1.1.11\\automaticgraphlayout.graphviewergdi.1.1.11.nupkg.sha512",
-    "C:\\Users\\mahesa lizardy\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.11\\automaticgraphlayout.wpfgraphcontrol.1.1.11.nupkg.sha512"
+    "C:\\Users\\mahesa lizardy\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.11\\automaticgraphlayout.wpfgraphcontrol.1.1.11.nupkg.sha512",
+    "C:\\Users\\mahesa lizardy\\.nuget\\packages\\opensans\\1.0.1\\opensans.1.0.1.nupkg.sha512"
   ],
   "logs": []
 }
