@@ -6,6 +6,7 @@ namespace src
         string[] files;
         string[] dirs;
         string fileSearch; // file yang dicari
+        string folder;
         public Form1()
         {
             InitializeComponent();
@@ -17,7 +18,7 @@ namespace src
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                textBox1.Text = dialog.SelectedPath;
+                label5.Text = dialog.SelectedPath;
 
                 testing.Items.Clear();
                 files = Directory.GetFiles(dialog.SelectedPath);
@@ -28,47 +29,50 @@ namespace src
 
         private void button2_Click(object sender, EventArgs e)
         {
+            folder = label5.Text;
             fileSearch = textBox2.Text; // file yang akan dicari
-
-            if (radioButton1.Checked)
+            if (fileSearch != null && folder != "No File Choosen..")
             {
-                // implement BFS search
-                foreach (string file in files)
+                if (radioButton1.Checked)
                 {
-                    testing.Items.Add(Path.GetFileName(file));
-                }
-                foreach (string dir in dirs)
-                {
-                    testing.Items.Add(Path.GetFileName(dir));
-                }
+                    // implement BFS search
+                    foreach (string file in files)
+                    {
+                        testing.Items.Add(Path.GetFileName(file));
+                    }
+                    foreach (string dir in dirs)
+                    {
+                        testing.Items.Add(Path.GetFileName(dir));
+                    }
 
-                Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
-                //create a graph object 
-                Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
-                //create the graph content 
-                
-                // mengambil nama parent
-                string parent = Path.GetFileName(textBox1.Text);
+                    Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+                    //create a graph object 
+                    Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
+                    //create the graph content 
 
-                // menambahkan edge parent ke child
-                foreach (string file in testing.Items)
-                {
-                    graph.AddEdge(parent, file).Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
-                }
+                    // mengambil nama parent
+                    string parent = Path.GetFileName(label5.Text);
 
-                this.gViewer1.Graph = graph; //untuk menampilkan graph
-            }
-            if (radioButton2.Checked)
-            {
-                // implement DFS searh
-                MessageBox.Show("Choose DFS");
-                foreach (string file in files)
-                {
-                    testing.Items.Add(Path.GetFileName(file));
+                    // menambahkan edge parent ke child
+                    foreach (string file in testing.Items)
+                    {
+                        graph.AddEdge(parent, file).Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
+                    }
+
+                    this.gViewer1.Graph = graph; //untuk menampilkan graph
                 }
-                foreach (string dir in dirs)
+                if (radioButton2.Checked)
                 {
-                    testing.Items.Add(Path.GetFileName(dir));
+                    // implement DFS searh
+                    MessageBox.Show("Choose DFS");
+                    foreach (string file in files)
+                    {
+                        testing.Items.Add(Path.GetFileName(file));
+                    }
+                    foreach (string dir in dirs)
+                    {
+                        testing.Items.Add(Path.GetFileName(dir));
+                    }
                 }
             }
         }
