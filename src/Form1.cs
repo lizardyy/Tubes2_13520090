@@ -50,6 +50,7 @@ namespace src
                         testing.Items.Add(cek);
                     }
 
+                    linkLabel1.Text = res;
                     //Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
                     ////create a graph object 
                     //Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
@@ -79,8 +80,13 @@ namespace src
                         testing.Items.Add(Path.GetFileName(dir));
                     }
                 }
+                panel4.Visible = true;
             }
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", @linkLabel1.Text);
+        }
     }
 }
