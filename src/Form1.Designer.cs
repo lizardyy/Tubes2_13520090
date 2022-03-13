@@ -148,7 +148,7 @@
             this.gViewer1.InsertingEdge = false;
             this.gViewer1.LayoutAlgorithmSettingsButtonVisible = true;
             this.gViewer1.LayoutEditingEnabled = true;
-            this.gViewer1.Location = new System.Drawing.Point(690, 55);
+            this.gViewer1.Location = new System.Drawing.Point(690, 93);
             this.gViewer1.LooseOffsetForRouting = 0.25D;
             this.gViewer1.MouseHitDistance = 0.05D;
             this.gViewer1.Name = "gViewer1";
@@ -162,10 +162,10 @@
             this.gViewer1.SaveButtonVisible = true;
             this.gViewer1.SaveGraphButtonVisible = true;
             this.gViewer1.SaveInVectorFormatEnabled = true;
-            this.gViewer1.Size = new System.Drawing.Size(563, 468);
+            this.gViewer1.Size = new System.Drawing.Size(563, 430);
             this.gViewer1.TabIndex = 5;
             this.gViewer1.TightOffsetForRouting = 0.125D;
-            this.gViewer1.ToolBarIsVisible = true;
+            this.gViewer1.ToolBarIsVisible = false;
             this.gViewer1.Transform = ((Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation)(resources.GetObject("gViewer1.Transform")));
             this.gViewer1.UndoRedoButtonsVisible = true;
             this.gViewer1.WindowZoomButtonPressed = false;
