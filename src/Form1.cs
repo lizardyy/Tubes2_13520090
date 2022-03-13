@@ -35,31 +35,36 @@ namespace src
             {
                 if (radioButton1.Checked)
                 {
-                    // implement BFS search
-                    foreach (string file in files)
+                    string res = BFS.Process(folder, fileSearch);
+                    if (res == "")
                     {
-                        testing.Items.Add(Path.GetFileName(file));
+                        testing.Items.Add("Tidak ditemukan file dengan nama " + fileSearch);
                     }
-                    foreach (string dir in dirs)
+                    else
                     {
-                        testing.Items.Add(Path.GetFileName(dir));
-                    }
-
-                    Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
-                    //create a graph object 
-                    Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
-                    //create the graph content 
-
-                    // mengambil nama parent
-                    string parent = Path.GetFileName(label5.Text);
-
-                    // menambahkan edge parent ke child
-                    foreach (string file in testing.Items)
-                    {
-                        graph.AddEdge(parent, file).Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
+                        testing.Items.Add("Ditemukan file pada " + res);
                     }
 
-                    this.gViewer1.Graph = graph; //untuk menampilkan graph
+                    foreach (string cek in BFS.pengecekan)
+                    {
+                        testing.Items.Add(cek);
+                    }
+
+                    //Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+                    ////create a graph object 
+                    //Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
+                    ////create the graph content 
+
+                    //// mengambil nama parent
+                    //string parent = Path.GetFileName(label5.Text);
+
+                    //// menambahkan edge parent ke child
+                    //foreach (string file in testing.Items)
+                    //{
+                    //    graph.AddEdge(parent, file).Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
+                    //}
+
+                    //this.gViewer1.Graph = graph; //untuk menampilkan graph
                 }
                 if (radioButton2.Checked)
                 {
