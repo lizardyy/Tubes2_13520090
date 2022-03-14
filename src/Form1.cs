@@ -1,3 +1,4 @@
+using System.Diagnostics;
 namespace src
 {
 
@@ -29,13 +30,16 @@ namespace src
 
         private void button2_Click(object sender, EventArgs e)
         {
+            var watch = new System.Diagnostics.Stopwatch();
             folder = label5.Text;
             fileSearch = textBox2.Text; // file yang akan dicari
             if (fileSearch != null && folder != "No File Choosen..")
             {
                 if (radioButton1.Checked)
                 {
+                    watch.Start();
                     string res = BFS.Process(folder, fileSearch);
+                    watch.Stop();
                     if (res == "")
                     {
                         testing.Items.Add("Tidak ditemukan file dengan nama " + fileSearch);
@@ -43,6 +47,7 @@ namespace src
                     else
                     {
                         testing.Items.Add("Ditemukan file pada " + res);
+                        panel4.Visible = true;
                     }
 
                     foreach (string cek in BFS.pengecekan)
@@ -50,7 +55,9 @@ namespace src
                         testing.Items.Add(cek);
                     }
 
+                    //
                     linkLabel1.Text = res;
+                    label8.Text = $"{watch.ElapsedMilliseconds} ms";
                     //Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
                     ////create a graph object 
                     //Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
@@ -80,13 +87,17 @@ namespace src
                         testing.Items.Add(Path.GetFileName(dir));
                     }
                 }
-                panel4.Visible = true;
             }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("explorer.exe", @linkLabel1.Text);
+            //System.Diagnostics.Process.Start("explorer.exe", linkLabel1.Text);
+            ProcessStartInfo psi = new ProcessStartInfo("Explorer.exe");
+            psi.Arguments = " /select," + linkLabel1.Text;//Set arguments
+            Process.Start(psi);
         }
+
+
     }
 }

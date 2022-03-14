@@ -45,6 +45,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.gradientPanel1 = new src.GradientPanel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -65,7 +66,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1405, 70);
+            this.panel1.Size = new System.Drawing.Size(1400, 70);
             this.panel1.TabIndex = 11;
             // 
             // label4
@@ -96,7 +97,7 @@
             this.testing.Cursor = System.Windows.Forms.Cursors.No;
             this.testing.FormattingEnabled = true;
             this.testing.ItemHeight = 18;
-            this.testing.Location = new System.Drawing.Point(32, 402);
+            this.testing.Location = new System.Drawing.Point(29, 402);
             this.testing.Name = "testing";
             this.testing.Size = new System.Drawing.Size(572, 90);
             this.testing.TabIndex = 1;
@@ -105,11 +106,11 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radioButton1.ForeColor = System.Drawing.Color.White;
             this.radioButton1.Location = new System.Drawing.Point(29, 297);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(58, 22);
+            this.radioButton1.Size = new System.Drawing.Size(72, 29);
             this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "BFS";
@@ -119,11 +120,11 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(122, 297);
+            this.radioButton2.Location = new System.Drawing.Point(119, 297);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(59, 22);
+            this.radioButton2.Size = new System.Drawing.Size(73, 29);
             this.radioButton2.TabIndex = 4;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "DFS";
@@ -162,7 +163,7 @@
             this.gViewer1.SaveButtonVisible = true;
             this.gViewer1.SaveGraphButtonVisible = true;
             this.gViewer1.SaveInVectorFormatEnabled = true;
-            this.gViewer1.Size = new System.Drawing.Size(563, 430);
+            this.gViewer1.Size = new System.Drawing.Size(558, 451);
             this.gViewer1.TabIndex = 5;
             this.gViewer1.TightOffsetForRouting = 0.125D;
             this.gViewer1.ToolBarIsVisible = false;
@@ -198,20 +199,22 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(30, 242);
+            this.textBox2.Location = new System.Drawing.Point(30, 245);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(222, 24);
             this.textBox2.TabIndex = 9;
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(28, 336);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 38);
+            this.button2.Size = new System.Drawing.Size(164, 43);
             this.button2.TabIndex = 10;
             this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel3
@@ -254,13 +257,14 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(4, 48);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 47);
             this.button1.TabIndex = 0;
             this.button1.Text = "Change Folder";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // gradientPanel1
@@ -284,7 +288,7 @@
             this.gradientPanel1.Controls.Add(this.label3);
             this.gradientPanel1.Location = new System.Drawing.Point(46, 112);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(1303, 659);
+            this.gradientPanel1.Size = new System.Drawing.Size(1298, 680);
             this.gradientPanel1.TabIndex = 15;
             this.gradientPanel1.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(40)))), ((int)(((byte)(72)))));
             // 
@@ -293,42 +297,59 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.linkLabel1);
-            this.panel4.Location = new System.Drawing.Point(690, 539);
+            this.panel4.Location = new System.Drawing.Point(690, 550);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(548, 97);
+            this.panel4.Size = new System.Drawing.Size(543, 127);
             this.panel4.TabIndex = 15;
             this.panel4.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(120, 83);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(23, 25);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "0";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label7.Location = new System.Drawing.Point(3, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 18);
+            this.label7.Size = new System.Drawing.Size(99, 25);
             this.label7.TabIndex = 2;
             this.label7.Text = "Path File :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(3, 66);
+            this.label6.Location = new System.Drawing.Point(0, 82);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 18);
+            this.label6.Size = new System.Drawing.Size(124, 25);
             this.label6.TabIndex = 1;
             this.label6.Text = "Time Spent :";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.linkLabel1.Location = new System.Drawing.Point(28, 27);
+            this.linkLabel1.Location = new System.Drawing.Point(30, 34);
+            this.linkLabel1.MaximumSize = new System.Drawing.Size(600, 0);
+            this.linkLabel1.MinimumSize = new System.Drawing.Size(338, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(38, 18);
+            this.linkLabel1.Size = new System.Drawing.Size(338, 22);
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Path";
@@ -348,7 +369,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1395, 813);
+            this.ClientSize = new System.Drawing.Size(1390, 834);
             this.Controls.Add(this.gradientPanel1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -397,5 +418,6 @@
         private Label label7;
         private Label label6;
         private LinkLabel linkLabel1;
+        private Label label8;
     }
 }
