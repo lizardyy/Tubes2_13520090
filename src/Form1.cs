@@ -1,3 +1,5 @@
+using Microsoft.Msagl.Drawing;
+using System.Collections;
 using System.Diagnostics;
 namespace src
 {
@@ -31,9 +33,12 @@ namespace src
         private void button2_Click(object sender, EventArgs e)
         {
             var watch = new System.Diagnostics.Stopwatch();
-            testing.Items.Clear();
             folder = label5.Text;
             fileSearch = textBox2.Text; // file yang akan dicari
+
+            Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+            Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
+
             if (fileSearch != null && folder != "No File Choosen..")
             {
                 if (radioButton1.Checked)
@@ -49,7 +54,6 @@ namespace src
                     //{
                     //    testing.Items.Add("Ditemukan file pada " + res);
                     //}
-                    panel4.Visible = true;
 
                     foreach (string cek in BFS.pengecekan)
                     {
@@ -58,10 +62,9 @@ namespace src
 
                     linkLabel1.Text = res;
                     label8.Text = $"{watch.ElapsedMilliseconds} ms";
-
-                    Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
-                    Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
-
+                    panel4.Visible = true;
+                    
+                    
                     bool colorize = true;
 
                     foreach (string file in testing.Items)
@@ -86,10 +89,13 @@ namespace src
                         }
 
                         if (splitFilename[len - 1] == fileSearch)
+                        {
                             colorize = false;
+                        }
+                        this.gViewer1.Graph = graph; //untuk menampilkan graph
+                        wait(500);
                     }
-
-                    this.gViewer1.Graph = graph; //untuk menampilkan graph
+                    
                 }
                 if (radioButton2.Checked)
                 {
@@ -105,6 +111,13 @@ namespace src
                     }
                 }
             }
+            // menghapus data sebelumnya
+            testing.Items.Clear();
+            BFS.pengecekan.Clear();
+            BFS.antrian.Clear();
+            Array.Clear(dirs, 0, dirs.Length);
+            Array.Clear(files,0, files.Length);
+
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -115,6 +128,27 @@ namespace src
             Process.Start(psi);
         }
 
+        public void wait(int milliseconds)
+        {
+            var timer1 = new System.Windows.Forms.Timer();
+            if (milliseconds == 0 || milliseconds < 0) return;
 
+            // Console.WriteLine("start wait timer");
+            timer1.Interval = milliseconds;
+            timer1.Enabled = true;
+            timer1.Start();
+
+            timer1.Tick += (s, e) =>
+            {
+                timer1.Enabled = false;
+                timer1.Stop();
+                // Console.WriteLine("stop wait timer");
+            };
+
+            while (timer1.Enabled)
+            {
+                Application.DoEvents();
+            }
+        }
     }
 }
