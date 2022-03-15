@@ -38,7 +38,9 @@ namespace src
             {
                 if (radioButton1.Checked)
                 {
+                    watch.Start();
                     string res = BFS.Process(folder, fileSearch);
+                    watch.Stop();
                     //if (res == "")
                     //{
                     //    testing.Items.Add("Tidak ditemukan file dengan nama " + fileSearch);
@@ -47,11 +49,15 @@ namespace src
                     //{
                     //    testing.Items.Add("Ditemukan file pada " + res);
                     //}
+                    panel4.Visible = true;
 
                     foreach (string cek in BFS.pengecekan)
                     {
                         testing.Items.Add(cek);
                     }
+
+                    linkLabel1.Text = res;
+                    label8.Text = $"{watch.ElapsedMilliseconds} ms";
 
                     Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
                     Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
