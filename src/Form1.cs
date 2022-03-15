@@ -31,48 +31,59 @@ namespace src
         private void button2_Click(object sender, EventArgs e)
         {
             var watch = new System.Diagnostics.Stopwatch();
+            testing.Items.Clear();
             folder = label5.Text;
             fileSearch = textBox2.Text; // file yang akan dicari
             if (fileSearch != null && folder != "No File Choosen..")
             {
                 if (radioButton1.Checked)
                 {
-                    watch.Start();
                     string res = BFS.Process(folder, fileSearch);
-                    watch.Stop();
-                    if (res == "")
-                    {
-                        testing.Items.Add("Tidak ditemukan file dengan nama " + fileSearch);
-                    }
-                    else
-                    {
-                        testing.Items.Add("Ditemukan file pada " + res);
-                        panel4.Visible = true;
-                    }
+                    //if (res == "")
+                    //{
+                    //    testing.Items.Add("Tidak ditemukan file dengan nama " + fileSearch);
+                    //}
+                    //else
+                    //{
+                    //    testing.Items.Add("Ditemukan file pada " + res);
+                    //}
 
                     foreach (string cek in BFS.pengecekan)
                     {
                         testing.Items.Add(cek);
                     }
 
-                    //
-                    linkLabel1.Text = res;
-                    label8.Text = $"{watch.ElapsedMilliseconds} ms";
-                    //Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
-                    ////create a graph object 
-                    //Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
-                    ////create the graph content 
+                    Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+                    Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
 
-                    //// mengambil nama parent
-                    //string parent = Path.GetFileName(label5.Text);
+                    bool colorize = true;
 
-                    //// menambahkan edge parent ke child
-                    //foreach (string file in testing.Items)
-                    //{
-                    //    graph.AddEdge(parent, file).Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
-                    //}
+                    foreach (string file in testing.Items)
+                    {
+                        string[] splitFilename = file.Split('\\');
+                        int len = splitFilename.Length;
+                        int i = 1;
+                        string child = splitFilename[len - i];
+                        var childNode = graph.FindNode(child);
+                        while (childNode != null)
+                        {
+                            child = splitFilename[len - ++i] + "\\" + child;
+                            childNode = graph.FindNode(child);
+                        }
+                        if (colorize)
+                        {
+                            graph.AddEdge(splitFilename[len - 2], child).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                        }
+                        else
+                        {
+                            graph.AddEdge(splitFilename[len - 2], child).Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
+                        }
 
-                    //this.gViewer1.Graph = graph; //untuk menampilkan graph
+                        if (splitFilename[len - 1] == fileSearch)
+                            colorize = false;
+                    }
+
+                    this.gViewer1.Graph = graph; //untuk menampilkan graph
                 }
                 if (radioButton2.Checked)
                 {
