@@ -50,6 +50,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -97,7 +98,7 @@
             this.testing.Cursor = System.Windows.Forms.Cursors.No;
             this.testing.FormattingEnabled = true;
             this.testing.ItemHeight = 18;
-            this.testing.Location = new System.Drawing.Point(29, 402);
+            this.testing.Location = new System.Drawing.Point(29, 427);
             this.testing.Name = "testing";
             this.testing.Size = new System.Drawing.Size(572, 90);
             this.testing.TabIndex = 1;
@@ -108,7 +109,7 @@
             this.radioButton1.BackColor = System.Drawing.Color.Transparent;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(29, 297);
+            this.radioButton1.Location = new System.Drawing.Point(29, 316);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(72, 29);
             this.radioButton1.TabIndex = 3;
@@ -122,7 +123,7 @@
             this.radioButton2.BackColor = System.Drawing.Color.Transparent;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(119, 297);
+            this.radioButton2.Location = new System.Drawing.Point(119, 316);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(73, 29);
             this.radioButton2.TabIndex = 4;
@@ -209,7 +210,7 @@
             this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(28, 336);
+            this.button2.Location = new System.Drawing.Point(28, 359);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(164, 43);
             this.button2.TabIndex = 10;
@@ -275,6 +276,7 @@
             this.gradientPanel1.Angle = 0F;
             this.gradientPanel1.BackColor = System.Drawing.Color.White;
             this.gradientPanel1.BottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.gradientPanel1.Controls.Add(this.checkBox1);
             this.gradientPanel1.Controls.Add(this.panel4);
             this.gradientPanel1.Controls.Add(this.panel2);
             this.gradientPanel1.Controls.Add(this.gViewer1);
@@ -363,6 +365,19 @@
             this.panel2.Size = new System.Drawing.Size(460, 4);
             this.panel2.TabIndex = 13;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.checkBox1.Location = new System.Drawing.Point(29, 278);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(178, 26);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.Text = "Find all occurence";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -419,5 +434,6 @@
         private Label label6;
         private LinkLabel linkLabel1;
         private Label label8;
+        private CheckBox checkBox1;
     }
 }

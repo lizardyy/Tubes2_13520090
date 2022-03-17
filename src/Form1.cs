@@ -10,6 +10,8 @@ namespace src
         string[] dirs;
         string fileSearch; // file yang dicari
         string folder;
+
+        int test = 0;
         public Form1()
         {
             InitializeComponent();
@@ -18,12 +20,22 @@ namespace src
         private void button1_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
-
+            
+                // menghapus data sebelumnya
+            testing.Items.Clear();
+            BFS.pengecekan.Clear();
+            BFS.antrian.Clear();
+            if(dirs!=null)
+            {
+                Array.Clear(dirs, 0, dirs.Length);
+            }
+            if (files!=null)
+            {
+                Array.Clear(files, 0, files.Length);
+            }
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 label5.Text = dialog.SelectedPath;
-
-                testing.Items.Clear();
                 files = Directory.GetFiles(dialog.SelectedPath);
                 dirs = Directory.GetDirectories(dialog.SelectedPath);
             }
@@ -41,7 +53,7 @@ namespace src
 
             if (fileSearch != null && folder != "No File Choosen..")
             {
-                if (radioButton1.Checked)
+                if (radioButton1.Checked && !checkBox1.Checked)
                 {
                     watch.Start();
                     string res = BFS.Process(folder, fileSearch);
@@ -111,13 +123,7 @@ namespace src
                     }
                 }
             }
-            // menghapus data sebelumnya
-            testing.Items.Clear();
-            BFS.pengecekan.Clear();
-            BFS.antrian.Clear();
-            Array.Clear(dirs, 0, dirs.Length);
-            Array.Clear(files,0, files.Length);
-
+            test++;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
