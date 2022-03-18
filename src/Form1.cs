@@ -11,13 +11,12 @@ namespace src
         string fileSearch; // file yang dicari
         string folder;
 
-        int test = 0;
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonChooseFolder_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
             
@@ -38,7 +37,7 @@ namespace src
         }
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonSearch_Click(object sender, EventArgs e)
         {
             var watch = new System.Diagnostics.Stopwatch();
             folder = labelFolderPath.Text;
@@ -159,7 +158,6 @@ namespace src
                     wait(200);
                 }
             }
-            test++;
         }
 
 
