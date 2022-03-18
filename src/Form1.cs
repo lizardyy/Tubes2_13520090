@@ -31,7 +31,7 @@ namespace src
             }
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                label5.Text = dialog.SelectedPath;
+                labelFolderPath.Text = dialog.SelectedPath;
                 files = Directory.GetFiles(dialog.SelectedPath);
                 dirs = Directory.GetDirectories(dialog.SelectedPath);
             }
@@ -41,8 +41,8 @@ namespace src
         private void button2_Click(object sender, EventArgs e)
         {
             var watch = new System.Diagnostics.Stopwatch();
-            folder = label5.Text;
-            fileSearch = textBox2.Text; // file yang akan dicari
+            folder = labelFolderPath.Text;
+            fileSearch = textBoxInputFileName.Text; // file yang akan dicari
 
             Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
@@ -50,8 +50,9 @@ namespace src
             if (fileSearch != null && folder != "No File Choosen..")
             {
                 // Membersihkan data sebelumnya
-                panel4.Visible = false;
+                panelOutput.Visible = false;
                 testing.Items.Clear();
+                listLinkPath.Items.Clear();
                 BFS.pengecekan.Clear();
                 BFS.antrian.Clear();
                 BFS.warnaPath.Clear();
@@ -67,15 +68,15 @@ namespace src
                 string file, warna, parent, child, ujung;
 
                 // BFS
-                if (radioButton1.Checked) {
+                if (radioButtonBfs.Checked) {
                     watch.Start();
-                    result = BFS.Solve(folder, fileSearch, checkBox1.Checked);
+                    result = BFS.Solve(folder, fileSearch, checkBoxFindAll.Checked);
                     watch.Stop();
                     pathColor = BFS.warnaPath;
                 }
 
                 // DFS
-                if (radioButton2.Checked)
+                if (radioButtonDfs.Checked)
                 {
                     // implement DFS searh
                     //MessageBox.Show("Choose DFS");
@@ -91,17 +92,18 @@ namespace src
 
                 // Tampilan ditemukan atau tidak
                 if (result.Count == 0){
-                    linkLabel1.Text = "Tidak ditemukan file dengan nama " + fileSearch;
+                    //linkLabel1.Text = "Tidak ditemukan file dengan nama " + fileSearch;
                     testing.Items.Add("Tidak ditemukan file dengan nama " + fileSearch);
                 }
                 else {
                     foreach (string res in result) {
                         testing.Items.Add(res);
-                        linkLabel1.Text = res;  // Implementasi yang ini masih menunggu link label yang bisa dinamis
+                        //linkLabel1.Text = res;  // Implementasi yang ini masih menunggu link label yang bisa dinamis
+                        listLinkPath.Items.Add(res);
                     }
                 }
-                label8.Text = $"{watch.ElapsedMilliseconds} ms";
-                panel4.Visible = true;
+                labelRuntime.Text = $"{watch.ElapsedMilliseconds} ms";
+                panelOutput.Visible = true;
 
                 // Algoritma untuk membuat graph dari pathWarna
 
@@ -135,7 +137,7 @@ namespace src
 
                     // Pemberian warna pada node dan edge pada graph
                     if (warna == "Red") {
-                        if (!checkBox1.Checked && !colorize) {
+                        if (!checkBoxFindAll.Checked && !colorize) {
                             graph.AddEdge(parent, child).Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
                             graph.FindNode(child).Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
                         } else {
@@ -150,7 +152,7 @@ namespace src
                     }
 
                     // Mengubah flag/tanda warna ketika tidak melakukan pencarian menyeluruh dan telah ditemukan file yang dicari
-                    if (ujung.Equals(fileSearch) && !checkBox1.Checked)
+                    if (ujung.Equals(fileSearch) && !checkBoxFindAll.Checked)
                         colorize = false;
 
                     this.gViewer1.Graph = graph;
@@ -160,13 +162,6 @@ namespace src
             test++;
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //System.Diagnostics.Process.Start("explorer.exe", linkLabel1.Text);
-            ProcessStartInfo psi = new ProcessStartInfo("Explorer.exe");
-            psi.Arguments = " /select," + linkLabel1.Text;//Set arguments
-            Process.Start(psi);
-        }
 
         public void wait(int milliseconds)
         {
@@ -190,5 +185,22 @@ namespace src
                 Application.DoEvents();
             }
         }
+
+        private void listLinkPath_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indeks = 0;
+            ListBox lb = sender as ListBox;
+            if (lb != null)
+            {
+                indeks = lb.SelectedIndex;
+            }
+            if (indeks < listLinkPath.Items.Count && indeks >= 0)
+            {
+                ProcessStartInfo psi = new ProcessStartInfo("Explorer.exe");
+                psi.Arguments = " /select," + testing.Items[indeks];//Set arguments
+                Process.Start(psi);
+            }
+        }
+
     }
 }

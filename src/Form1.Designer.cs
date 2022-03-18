@@ -28,69 +28,69 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelHeader = new System.Windows.Forms.Panel();
+            this.labelNameApp = new System.Windows.Forms.Label();
+            this.logoApp = new System.Windows.Forms.PictureBox();
             this.testing = new System.Windows.Forms.ListBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonBfs = new System.Windows.Forms.RadioButton();
+            this.radioButtonDfs = new System.Windows.Forms.RadioButton();
             this.gViewer1 = new Microsoft.Msagl.GraphViewerGdi.GViewer();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.gradientPanel1 = new src.GradientPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.labelInput = new System.Windows.Forms.Label();
+            this.labelInputFile = new System.Windows.Forms.Label();
+            this.textBoxInputFileName = new System.Windows.Forms.TextBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.panelChooseFile = new System.Windows.Forms.Panel();
+            this.labelFolderPath = new System.Windows.Forms.Label();
+            this.labelChooseFolder = new System.Windows.Forms.Label();
+            this.buttonChooseFolder = new System.Windows.Forms.Button();
+            this.panelMain = new src.GradientPanel();
+            this.checkBoxFindAll = new System.Windows.Forms.CheckBox();
+            this.panelOutput = new System.Windows.Forms.Panel();
+            this.listLinkPath = new System.Windows.Forms.ListBox();
+            this.labelRuntime = new System.Windows.Forms.Label();
+            this.labellinkPath = new System.Windows.Forms.Label();
+            this.labelTime = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.gradientPanel1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoApp)).BeginInit();
+            this.panelChooseFile.SuspendLayout();
+            this.panelMain.SuspendLayout();
+            this.panelOutput.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelHeader
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(-1, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1400, 70);
-            this.panel1.TabIndex = 11;
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panelHeader.Controls.Add(this.labelNameApp);
+            this.panelHeader.Controls.Add(this.logoApp);
+            this.panelHeader.Location = new System.Drawing.Point(-1, 1);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(1400, 70);
+            this.panelHeader.TabIndex = 11;
             // 
-            // label4
+            // labelNameApp
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label4.Location = new System.Drawing.Point(105, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(245, 42);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "MesinPencari";
+            this.labelNameApp.AutoSize = true;
+            this.labelNameApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelNameApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.labelNameApp.Location = new System.Drawing.Point(105, 16);
+            this.labelNameApp.Name = "labelNameApp";
+            this.labelNameApp.Size = new System.Drawing.Size(245, 42);
+            this.labelNameApp.TabIndex = 13;
+            this.labelNameApp.Text = "MesinPencari";
             // 
-            // pictureBox1
+            // logoApp
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(32, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 56);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.logoApp.BackColor = System.Drawing.Color.Transparent;
+            this.logoApp.Image = ((System.Drawing.Image)(resources.GetObject("logoApp.Image")));
+            this.logoApp.Location = new System.Drawing.Point(32, 5);
+            this.logoApp.Name = "logoApp";
+            this.logoApp.Size = new System.Drawing.Size(56, 56);
+            this.logoApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoApp.TabIndex = 0;
+            this.logoApp.TabStop = false;
             // 
             // testing
             // 
@@ -103,33 +103,33 @@
             this.testing.Size = new System.Drawing.Size(572, 90);
             this.testing.TabIndex = 1;
             // 
-            // radioButton1
+            // radioButtonBfs
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(29, 316);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(72, 29);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "BFS";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.radioButtonBfs.AutoSize = true;
+            this.radioButtonBfs.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonBfs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButtonBfs.ForeColor = System.Drawing.Color.White;
+            this.radioButtonBfs.Location = new System.Drawing.Point(29, 316);
+            this.radioButtonBfs.Name = "radioButtonBfs";
+            this.radioButtonBfs.Size = new System.Drawing.Size(72, 29);
+            this.radioButtonBfs.TabIndex = 3;
+            this.radioButtonBfs.TabStop = true;
+            this.radioButtonBfs.Text = "BFS";
+            this.radioButtonBfs.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // radioButtonDfs
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(119, 316);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(73, 29);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "DFS";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.radioButtonDfs.AutoSize = true;
+            this.radioButtonDfs.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonDfs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButtonDfs.ForeColor = System.Drawing.Color.White;
+            this.radioButtonDfs.Location = new System.Drawing.Point(119, 316);
+            this.radioButtonDfs.Name = "radioButtonDfs";
+            this.radioButtonDfs.Size = new System.Drawing.Size(73, 29);
+            this.radioButtonDfs.TabIndex = 4;
+            this.radioButtonDfs.TabStop = true;
+            this.radioButtonDfs.Text = "DFS";
+            this.radioButtonDfs.UseVisualStyleBackColor = false;
             // 
             // gViewer1
             // 
@@ -150,7 +150,7 @@
             this.gViewer1.InsertingEdge = false;
             this.gViewer1.LayoutAlgorithmSettingsButtonVisible = true;
             this.gViewer1.LayoutEditingEnabled = true;
-            this.gViewer1.Location = new System.Drawing.Point(690, 93);
+            this.gViewer1.Location = new System.Drawing.Point(629, 93);
             this.gViewer1.LooseOffsetForRouting = 0.25D;
             this.gViewer1.MouseHitDistance = 0.05D;
             this.gViewer1.Name = "gViewer1";
@@ -164,198 +164,213 @@
             this.gViewer1.SaveButtonVisible = true;
             this.gViewer1.SaveGraphButtonVisible = true;
             this.gViewer1.SaveInVectorFormatEnabled = true;
-            this.gViewer1.Size = new System.Drawing.Size(558, 451);
+            this.gViewer1.Size = new System.Drawing.Size(619, 396);
             this.gViewer1.TabIndex = 5;
             this.gViewer1.TightOffsetForRouting = 0.125D;
-            this.gViewer1.ToolBarIsVisible = false;
+            this.gViewer1.ToolBarIsVisible = true;
             this.gViewer1.Transform = ((Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation)(resources.GetObject("gViewer1.Transform")));
             this.gViewer1.UndoRedoButtonsVisible = true;
             this.gViewer1.WindowZoomButtonPressed = false;
             this.gViewer1.ZoomF = 1D;
             this.gViewer1.ZoomWindowThreshold = 0.05D;
             // 
-            // label1
+            // labelInput
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label1.Location = new System.Drawing.Point(28, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 46);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Input";
+            this.labelInput.AutoSize = true;
+            this.labelInput.BackColor = System.Drawing.Color.Transparent;
+            this.labelInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.labelInput.Location = new System.Drawing.Point(28, 13);
+            this.labelInput.Name = "labelInput";
+            this.labelInput.Size = new System.Drawing.Size(112, 46);
+            this.labelInput.TabIndex = 6;
+            this.labelInput.Text = "Input";
             // 
-            // label3
+            // labelInputFile
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label3.Location = new System.Drawing.Point(29, 210);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 29);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Input File Name";
+            this.labelInputFile.AutoSize = true;
+            this.labelInputFile.BackColor = System.Drawing.Color.Transparent;
+            this.labelInputFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelInputFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.labelInputFile.Location = new System.Drawing.Point(29, 210);
+            this.labelInputFile.Name = "labelInputFile";
+            this.labelInputFile.Size = new System.Drawing.Size(183, 29);
+            this.labelInputFile.TabIndex = 8;
+            this.labelInputFile.Text = "Input File Name";
             // 
-            // textBox2
+            // textBoxInputFileName
             // 
-            this.textBox2.Location = new System.Drawing.Point(30, 245);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(222, 24);
-            this.textBox2.TabIndex = 9;
+            this.textBoxInputFileName.Location = new System.Drawing.Point(30, 245);
+            this.textBoxInputFileName.Name = "textBoxInputFileName";
+            this.textBoxInputFileName.Size = new System.Drawing.Size(222, 24);
+            this.textBoxInputFileName.TabIndex = 9;
             // 
-            // button2
+            // buttonSearch
             // 
-            this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(28, 359);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 43);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonSearch.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSearch.ForeColor = System.Drawing.Color.Black;
+            this.buttonSearch.Location = new System.Drawing.Point(28, 359);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(164, 43);
+            this.buttonSearch.TabIndex = 10;
+            this.buttonSearch.Text = "Search";
+            this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.button2_Click);
             // 
-            // panel3
+            // panelChooseFile
             // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Location = new System.Drawing.Point(28, 93);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(576, 99);
-            this.panel3.TabIndex = 12;
+            this.panelChooseFile.BackColor = System.Drawing.Color.Transparent;
+            this.panelChooseFile.Controls.Add(this.labelFolderPath);
+            this.panelChooseFile.Controls.Add(this.labelChooseFolder);
+            this.panelChooseFile.Controls.Add(this.buttonChooseFolder);
+            this.panelChooseFile.Location = new System.Drawing.Point(28, 93);
+            this.panelChooseFile.Name = "panelChooseFile";
+            this.panelChooseFile.Size = new System.Drawing.Size(576, 99);
+            this.panelChooseFile.TabIndex = 12;
             // 
-            // label5
+            // labelFolderPath
             // 
-            this.label5.AllowDrop = true;
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label5.Location = new System.Drawing.Point(174, 57);
-            this.label5.MaximumSize = new System.Drawing.Size(450, 0);
-            this.label5.MinimumSize = new System.Drawing.Size(338, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(338, 18);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "No File Choosen..";
+            this.labelFolderPath.AllowDrop = true;
+            this.labelFolderPath.AutoSize = true;
+            this.labelFolderPath.BackColor = System.Drawing.Color.Transparent;
+            this.labelFolderPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelFolderPath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.labelFolderPath.Location = new System.Drawing.Point(174, 57);
+            this.labelFolderPath.MaximumSize = new System.Drawing.Size(450, 0);
+            this.labelFolderPath.MinimumSize = new System.Drawing.Size(338, 0);
+            this.labelFolderPath.Name = "labelFolderPath";
+            this.labelFolderPath.Size = new System.Drawing.Size(338, 18);
+            this.labelFolderPath.TabIndex = 9;
+            this.labelFolderPath.Text = "No File Choosen..";
             // 
-            // label2
+            // labelChooseFolder
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label2.Location = new System.Drawing.Point(1, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 29);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Choose File directori";
+            this.labelChooseFolder.AutoSize = true;
+            this.labelChooseFolder.BackColor = System.Drawing.Color.Transparent;
+            this.labelChooseFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelChooseFolder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.labelChooseFolder.Location = new System.Drawing.Point(1, 9);
+            this.labelChooseFolder.Name = "labelChooseFolder";
+            this.labelChooseFolder.Size = new System.Drawing.Size(238, 29);
+            this.labelChooseFolder.TabIndex = 7;
+            this.labelChooseFolder.Text = "Choose File directori";
             // 
-            // button1
+            // buttonChooseFolder
             // 
-            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(4, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 47);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Change Folder";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonChooseFolder.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonChooseFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonChooseFolder.Location = new System.Drawing.Point(4, 48);
+            this.buttonChooseFolder.Name = "buttonChooseFolder";
+            this.buttonChooseFolder.Size = new System.Drawing.Size(163, 47);
+            this.buttonChooseFolder.TabIndex = 0;
+            this.buttonChooseFolder.Text = "Change Folder";
+            this.buttonChooseFolder.UseVisualStyleBackColor = false;
+            this.buttonChooseFolder.Click += new System.EventHandler(this.button1_Click);
             // 
-            // gradientPanel1
+            // panelMain
             // 
-            this.gradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gradientPanel1.Angle = 0F;
-            this.gradientPanel1.BackColor = System.Drawing.Color.White;
-            this.gradientPanel1.BottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.gradientPanel1.Controls.Add(this.checkBox1);
-            this.gradientPanel1.Controls.Add(this.panel4);
-            this.gradientPanel1.Controls.Add(this.panel2);
-            this.gradientPanel1.Controls.Add(this.gViewer1);
-            this.gradientPanel1.Controls.Add(this.button2);
-            this.gradientPanel1.Controls.Add(this.testing);
-            this.gradientPanel1.Controls.Add(this.panel3);
-            this.gradientPanel1.Controls.Add(this.textBox2);
-            this.gradientPanel1.Controls.Add(this.radioButton2);
-            this.gradientPanel1.Controls.Add(this.label1);
-            this.gradientPanel1.Controls.Add(this.radioButton1);
-            this.gradientPanel1.Controls.Add(this.label3);
-            this.gradientPanel1.Location = new System.Drawing.Point(46, 112);
-            this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(1298, 680);
-            this.gradientPanel1.TabIndex = 15;
-            this.gradientPanel1.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(40)))), ((int)(((byte)(72)))));
+            this.panelMain.Angle = 0F;
+            this.panelMain.BackColor = System.Drawing.Color.White;
+            this.panelMain.BottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(40)))), ((int)(((byte)(76)))));
+            this.panelMain.Controls.Add(this.checkBoxFindAll);
+            this.panelMain.Controls.Add(this.panelOutput);
+            this.panelMain.Controls.Add(this.panel2);
+            this.panelMain.Controls.Add(this.gViewer1);
+            this.panelMain.Controls.Add(this.buttonSearch);
+            this.panelMain.Controls.Add(this.testing);
+            this.panelMain.Controls.Add(this.panelChooseFile);
+            this.panelMain.Controls.Add(this.textBoxInputFileName);
+            this.panelMain.Controls.Add(this.radioButtonDfs);
+            this.panelMain.Controls.Add(this.labelInput);
+            this.panelMain.Controls.Add(this.radioButtonBfs);
+            this.panelMain.Controls.Add(this.labelInputFile);
+            this.panelMain.Location = new System.Drawing.Point(46, 112);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1298, 680);
+            this.panelMain.TabIndex = 15;
+            this.panelMain.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(40)))), ((int)(((byte)(72)))));
             // 
-            // panel4
+            // checkBoxFindAll
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.checkBoxFindAll.AutoSize = true;
+            this.checkBoxFindAll.BackColor = System.Drawing.Color.Transparent;
+            this.checkBoxFindAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxFindAll.ForeColor = System.Drawing.SystemColors.Control;
+            this.checkBoxFindAll.Location = new System.Drawing.Point(29, 278);
+            this.checkBoxFindAll.Name = "checkBoxFindAll";
+            this.checkBoxFindAll.Size = new System.Drawing.Size(178, 26);
+            this.checkBoxFindAll.TabIndex = 16;
+            this.checkBoxFindAll.Text = "Find all occurence";
+            this.checkBoxFindAll.UseVisualStyleBackColor = false;
+            // 
+            // panelOutput
+            // 
+            this.panelOutput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.linkLabel1);
-            this.panel4.Location = new System.Drawing.Point(690, 550);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(543, 127);
-            this.panel4.TabIndex = 15;
-            this.panel4.Visible = false;
+            this.panelOutput.BackColor = System.Drawing.Color.Transparent;
+            this.panelOutput.Controls.Add(this.listLinkPath);
+            this.panelOutput.Controls.Add(this.labelRuntime);
+            this.panelOutput.Controls.Add(this.labellinkPath);
+            this.panelOutput.Controls.Add(this.labelTime);
+            this.panelOutput.Location = new System.Drawing.Point(629, 495);
+            this.panelOutput.Name = "panelOutput";
+            this.panelOutput.Size = new System.Drawing.Size(619, 182);
+            this.panelOutput.TabIndex = 15;
+            this.panelOutput.Visible = false;
             // 
-            // label8
+            // listLinkPath
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(120, 83);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(23, 25);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "0";
+            this.listLinkPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
+            this.listLinkPath.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listLinkPath.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.listLinkPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.listLinkPath.ForeColor = System.Drawing.Color.Aquamarine;
+            this.listLinkPath.FormattingEnabled = true;
+            this.listLinkPath.ItemHeight = 18;
+            this.listLinkPath.Location = new System.Drawing.Point(11, 37);
+            this.listLinkPath.MaximumSize = new System.Drawing.Size(593, 90);
+            this.listLinkPath.MinimumSize = new System.Drawing.Size(200, 30);
+            this.listLinkPath.Name = "listLinkPath";
+            this.listLinkPath.Size = new System.Drawing.Size(593, 72);
+            this.listLinkPath.TabIndex = 17;
+            this.listLinkPath.SelectedIndexChanged += new System.EventHandler(this.listLinkPath_SelectedIndexChanged);
             // 
-            // label7
+            // labelRuntime
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(3, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 25);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Path File :";
+            this.labelRuntime.AutoSize = true;
+            this.labelRuntime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelRuntime.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelRuntime.Location = new System.Drawing.Point(133, 138);
+            this.labelRuntime.Name = "labelRuntime";
+            this.labelRuntime.Size = new System.Drawing.Size(23, 25);
+            this.labelRuntime.TabIndex = 3;
+            this.labelRuntime.Text = "0";
             // 
-            // label6
+            // labellinkPath
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(0, 82);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 25);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Time Spent :";
+            this.labellinkPath.AutoSize = true;
+            this.labellinkPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labellinkPath.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labellinkPath.Location = new System.Drawing.Point(3, 9);
+            this.labellinkPath.Name = "labellinkPath";
+            this.labellinkPath.Size = new System.Drawing.Size(99, 25);
+            this.labellinkPath.TabIndex = 2;
+            this.labellinkPath.Text = "Path File :";
             // 
-            // linkLabel1
+            // labelTime
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.linkLabel1.Location = new System.Drawing.Point(30, 34);
-            this.linkLabel1.MaximumSize = new System.Drawing.Size(600, 0);
-            this.linkLabel1.MinimumSize = new System.Drawing.Size(338, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(338, 22);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Path";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.labelTime.AutoSize = true;
+            this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTime.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelTime.Location = new System.Drawing.Point(3, 138);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(124, 25);
+            this.labelTime.TabIndex = 1;
+            this.labelTime.Text = "Time Spent :";
             // 
             // panel2
             // 
@@ -365,19 +380,6 @@
             this.panel2.Size = new System.Drawing.Size(460, 4);
             this.panel2.TabIndex = 13;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.checkBox1.Location = new System.Drawing.Point(29, 278);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(178, 26);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Find all occurence";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -385,22 +387,22 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1390, 834);
-            this.Controls.Add(this.gradientPanel1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelMain);
+            this.Controls.Add(this.panelHeader);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "MesinPencari";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.gradientPanel1.ResumeLayout(false);
-            this.gradientPanel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panelHeader.ResumeLayout(false);
+            this.panelHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoApp)).EndInit();
+            this.panelChooseFile.ResumeLayout(false);
+            this.panelChooseFile.PerformLayout();
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
+            this.panelOutput.ResumeLayout(false);
+            this.panelOutput.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -408,32 +410,32 @@
         public override bool Equals(object obj)
         {
             return obj is Form1 form &&
-                   EqualityComparer<Button>.Default.Equals(button1, form.button1);
+                   EqualityComparer<Button>.Default.Equals(buttonChooseFolder, form.buttonChooseFolder);
         }
 
         #endregion
-        private Panel panel1;
-        private Label label4;
-        private PictureBox pictureBox1;
+        private Panel panelHeader;
+        private Label labelNameApp;
+        private PictureBox logoApp;
         private ListBox testing;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+        private RadioButton radioButtonBfs;
+        private RadioButton radioButtonDfs;
         private Microsoft.Msagl.GraphViewerGdi.GViewer gViewer1;
-        private Label label1;
-        private Label label3;
-        private TextBox textBox2;
-        private Button button2;
-        private Panel panel3;
-        private Label label2;
-        private Button button1;
-        private GradientPanel gradientPanel1;
-        private Label label5;
+        private Label labelInput;
+        private Label labelInputFile;
+        private TextBox textBoxInputFileName;
+        private Button buttonSearch;
+        private Panel panelChooseFile;
+        private Label labelChooseFolder;
+        private Button buttonChooseFolder;
+        private GradientPanel panelMain;
+        private Label labelFolderPath;
         private Panel panel2;
-        private Panel panel4;
-        private Label label7;
-        private Label label6;
-        private LinkLabel linkLabel1;
-        private Label label8;
-        private CheckBox checkBox1;
+        private Panel panelOutput;
+        private Label labellinkPath;
+        private Label labelTime;
+        private Label labelRuntime;
+        private CheckBox checkBoxFindAll;
+        private ListBox listLinkPath;
     }
 }
