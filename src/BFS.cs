@@ -8,25 +8,10 @@ namespace src
     {
         public static Queue<string> antrian = new Queue<string>();
         public static List<string> pengecekan = new List<string>();
+        public static Dictionary<string, string> warnaPath = new Dictionary<string, string>();
 
-        public static void Solve(string path, string filename, bool allOccur)
+        public static List<string> Solve(string pathfile, string filename, bool allOccur)
         {
-            List<string> res = Process(path, filename, allOccur);
-            if (res.Count == 0)
-            {
-                Console.WriteLine("Tidak Ditemukan");
-            }
-            else
-            {
-                Console.Write("Ditemukan: ");
-                Console.WriteLine(res);
-            }
-        }
-
-        public static List<string> Process(string pathfile, string filename, bool allOccur)
-        {
-            Console.WriteLine("Root   : " + pathfile);
-            Console.WriteLine("Target : " + filename + "\n");
             antrian.Enqueue(pathfile);
             string first;
             string[] dirs, files;
@@ -39,14 +24,28 @@ namespace src
                 foreach (string file in files) {
                     string[] splitFile = file.Split("\\");
                     pengecekan.Add(file);
+                    // File ditemukan
                     if (splitFile[splitFile.Length - 1] == filename) {
+                        warnaPath.Add(file, "Blue");
+                        splitFile = splitFile[..^1];
+                        string folder = string.Join("\\", splitFile);
+                        while (folder != pathfile)
+                        {
+                            if (warnaPath.ContainsKey(folder))
+                                warnaPath[folder] = "Blue";
+                            splitFile = splitFile[..^1];
+                            folder = string.Join("\\", splitFile);
+                        }
                         result.Add(file);
+                    } else {
+                        warnaPath.Add(file, "Red");
                     }
                 }
 
                 dirs = Directory.GetDirectories(first);
                 foreach (string dir in dirs) {
                     pengecekan.Add(dir);
+                    warnaPath.Add(dir, "Red");
                     antrian.Enqueue(dir);
                 }
 

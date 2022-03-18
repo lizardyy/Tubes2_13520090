@@ -21,10 +21,6 @@ namespace src
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
             
-                // menghapus data sebelumnya
-            testing.Items.Clear();
-            BFS.pengecekan.Clear();
-            BFS.antrian.Clear();
             if(dirs!=null)
             {
                 Array.Clear(dirs, 0, dirs.Length);
@@ -53,167 +49,112 @@ namespace src
 
             if (fileSearch != null && folder != "No File Choosen..")
             {
+                // Membersihkan data sebelumnya
                 panel4.Visible = false;
                 testing.Items.Clear();
-                // BFS without All Occurence checked
-                if (radioButton1.Checked && !checkBox1.Checked) {
+                BFS.pengecekan.Clear();
+                BFS.antrian.Clear();
+                BFS.warnaPath.Clear();
+
+                List<string> result = new List<string>();
+                Dictionary<string, string> pathColor = new Dictionary<string, string>();
+                string[] splitPath;
+                bool colorize = true;
+
+                // Mengambil root node (folder pencarian)
+                splitPath = folder.Split("\\");
+                string root = splitPath[splitPath.Length - 1];
+                string file, warna, parent, child, ujung;
+
+                // BFS
+                if (radioButton1.Checked) {
                     watch.Start();
-                    List<string> result = BFS.Process(folder, fileSearch, false);
+                    result = BFS.Solve(folder, fileSearch, checkBox1.Checked);
                     watch.Stop();
-
-                    foreach (string cek in BFS.pengecekan) {
-                        testing.Items.Add(cek);
-                    }
-
-                    if (result.Count == 0) {
-                        linkLabel1.Text = "Tidak ditemukan file dengan nama " + fileSearch;
-                    }
-                    else {
-                        // Kalau 1 masih benar
-                        foreach (string res in result) {
-                            linkLabel1.Text = res;
-                        }
-                    }
-                    label8.Text = $"{watch.ElapsedMilliseconds} ms";
-                    panel4.Visible = true;
-
-
-                    bool colorize = true;
-
-                    string[] splitPath = folder.Split("\\");
-                    graph.AddNode(splitPath[splitPath.Length - 1]).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
-
-                    foreach (string file in testing.Items) {
-                        splitPath = file.Split('\\');
-                        string parent, child;
-
-                        int len = splitPath.Length;
-                        string ujung = splitPath[len - 1];
-                        splitPath = splitPath[..^1];
-
-                        int i = 0;
-
-                        parent = string.Join("\\", splitPath);
-                        child = ujung;
-
-                        var parentNode = graph.FindNode(parent);
-                        while (parentNode == null && parent != "") {
-                            i++;
-                            parent = string.Join("\\", splitPath.Skip(i));
-                            parentNode = graph.FindNode(parent);
-                        }
-
-                        if (graph.FindNode(child) != null) {
-                            child = parent + "\\" + child;
-                        }
-
-                        graph.FindNode(parent).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
-                        if (colorize) {
-                            graph.AddEdge(parent, child).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
-                            graph.FindNode(child).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
-                        }
-                        else {
-                            graph.AddEdge(parent, child).Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
-                        }
-
-                        if (ujung == fileSearch) {
-                            colorize = false;
-                        }
-                        this.gViewer1.Graph = graph; //untuk menampilkan graph
-                        wait(200);
-                    }
+                    pathColor = BFS.warnaPath;
                 }
 
-                // BFS with All Occurence checked
-                if (radioButton1.Checked && checkBox1.Checked) {
-                    watch.Start();
-                    List<string> result = BFS.Process(folder, fileSearch, true);
-                    watch.Stop();
-
-                    foreach (string cek in BFS.pengecekan) {
-                        testing.Items.Add(cek);
-                    }
-
-                    if (result.Count == 0) {
-                        linkLabel1.Text = "Tidak ditemukan file dengan nama " + fileSearch;
-                    }
-                    else {
-                        // Kalau multivalue masih belum bisa, cuma hasil terakhir yang keluar
-                        foreach (string res in result) {
-                            linkLabel1.Text = res;
-                        }
-                    }
-                    label8.Text = $"{watch.ElapsedMilliseconds} ms";
-                    panel4.Visible = true;
-
-                    string[] splitPath = folder.Split("\\");
-                    string root = splitPath[splitPath.Length - 1];
-                    graph.AddNode(root).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
-
-                    foreach (string file in testing.Items)
-                    {
-                        splitPath = file.Split('\\');
-                        string parent, child;
-
-                        int len = splitPath.Length;
-                        string ujung = splitPath[len - 1];
-                        splitPath = splitPath[..^1];
-
-                        int i = 0;
-
-                        parent = string.Join("\\", splitPath);
-                        child = ujung;
-
-                        var parentNode = graph.FindNode(parent);
-                        while (parentNode == null && parent != "")
-                        {
-                            i++;
-                            parent = string.Join("\\", splitPath.Skip(i));
-                            parentNode = graph.FindNode(parent);
-                        }
-
-                        if (graph.FindNode(child) != null)
-                        {
-                            child = parent + "\\" + child;
-                        }
-
-                        graph.FindNode(parent).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
-                        graph.AddEdge(parent, child).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
-                        graph.FindNode(child).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
-
-                        this.gViewer1.Graph = graph; //untuk menampilkan graph
-                        wait(200);
-                    }
-
-                    // Ini untuk mewarnai route file yang ditemukan, tapi belum jadi
-                    //foreach (string res in result) {
-                    //    string[] splitRes = res.Split("\\");
-                    //    int len = splitRes.Length, i = 1;
-                    //    string parent = "";
-                    //    string child = splitRes[len - i];
-
-                    //    var childNode = graph.FindNode(child);
-                    //    while (parent != root) {
-                    //        childNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
-                    //        parent = splitRes[len - ++i];
-
-                    //        var edgeFound = graph.Find
-                    //    }
-                    //}
-                }
-
+                // DFS
                 if (radioButton2.Checked)
                 {
                     // implement DFS searh
-                    MessageBox.Show("Choose DFS");
-                    foreach (string file in files)
-                    {
-                        testing.Items.Add(Path.GetFileName(file));
+                    //MessageBox.Show("Choose DFS");
+                    //foreach (string file in files)
+                    //{
+                    //    testing.Items.Add(Path.GetFileName(file));
+                    //}
+                    //foreach (string dir in dirs)
+                    //{
+                    //    testing.Items.Add(Path.GetFileName(dir));
+                    //}
+                }
+
+                // Tampilan ditemukan atau tidak
+                if (result.Count == 0){
+                    linkLabel1.Text = "Tidak ditemukan file dengan nama " + fileSearch;
+                    testing.Items.Add("Tidak ditemukan file dengan nama " + fileSearch);
+                }
+                else {
+                    foreach (string res in result) {
+                        testing.Items.Add(res);
+                        linkLabel1.Text = res;  // Implementasi yang ini masih menunggu link label yang bisa dinamis
                     }
-                    foreach (string dir in dirs)
-                    {
-                        testing.Items.Add(Path.GetFileName(dir));
+                }
+                label8.Text = $"{watch.ElapsedMilliseconds} ms";
+                panel4.Visible = true;
+
+                // Algoritma untuk membuat graph dari pathWarna
+
+                if (result.Count == 0)
+                    graph.AddNode(root).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                else
+                    graph.AddNode(root).Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
+
+                foreach (KeyValuePair<string, string> pair in pathColor)
+                {
+                    file = pair.Key;
+                    warna = pair.Value;
+
+                    splitPath = file.Split('\\');
+                    ujung = splitPath[splitPath.Length - 1];
+                    splitPath = splitPath[..^1];
+
+                    parent = string.Join("\\", splitPath);
+                    child = ujung;
+
+                    int i = 0;
+                    var parentNode = graph.FindNode(parent);
+                    while (parentNode == null && parent != "") {
+                        parent = string.Join("\\", splitPath.Skip(++i));
+                        parentNode = graph.FindNode(parent);
                     }
+
+                    if (graph.FindNode(child) != null) {
+                        child = parent + "\\" + child;
+                    }
+
+                    // Pemberian warna pada node dan edge pada graph
+                    if (warna == "Red") {
+                        if (!checkBox1.Checked && !colorize) {
+                            graph.AddEdge(parent, child).Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
+                            graph.FindNode(child).Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
+                        } else {
+                            graph.AddEdge(parent, child).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                            graph.FindNode(child).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                        }
+                    }
+                    else {
+                        graph.FindNode(parent).Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
+                        graph.AddEdge(parent, child).Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
+                        graph.FindNode(child).Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
+                    }
+
+                    // Mengubah flag/tanda warna ketika tidak melakukan pencarian menyeluruh dan telah ditemukan file yang dicari
+                    if (ujung.Equals(fileSearch) && !checkBox1.Checked)
+                        colorize = false;
+
+                    this.gViewer1.Graph = graph;
+                    wait(200);
                 }
             }
             test++;
