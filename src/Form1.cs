@@ -77,16 +77,10 @@ namespace src
                 // DFS
                 if (radioButtonDfs.Checked)
                 {
-                    // implement DFS searh
-                    //MessageBox.Show("Choose DFS");
-                    //foreach (string file in files)
-                    //{
-                    //    testing.Items.Add(Path.GetFileName(file));
-                    //}
-                    //foreach (string dir in dirs)
-                    //{
-                    //    testing.Items.Add(Path.GetFileName(dir));
-                    //}
+                    watch.Start();
+                    DFS pp = new DFS();
+                    pp.DFSearch(folder, fileSearch, pengecekan, result, checkBoxFindAll.Checked);
+                    watch.Stop();
                 }
 
                 // Tampilan ditemukan atau tidak
