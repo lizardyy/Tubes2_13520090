@@ -22,13 +22,13 @@ public class DFS
 				result.Add(file);
 				found_1 = true;
 			}
+			// Jika tidak perlu mengecek semua file dan telah ditemukan 1 yang cocok, maka keluar dari proses pengecekan.
+			if (!checkAll && found_1){
+				return;
+			}
 		}
-		// Jika tidak perlu mengecek semua file dan telah ditemukan 1 yang cocok, maka keluar dari proses pengecekan.
-		if (!checkAll && found_1){
-			return;
-		}
-
-
+		
+		
 		//* -> Bagian 2 : Rekursif *//
 		// Cek semua folder yang ada, lalu lakukan pengecekan secara rekursif untuk setiap folder
 		string[] dirs = Directory.GetDirectories(folder);
