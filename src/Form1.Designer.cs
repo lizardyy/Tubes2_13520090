@@ -46,6 +46,7 @@
             this.panelMain = new src.GradientPanel();
             this.checkBoxFindAll = new System.Windows.Forms.CheckBox();
             this.panelOutput = new System.Windows.Forms.Panel();
+            this.labelPathnoFile = new System.Windows.Forms.Label();
             this.listLinkPath = new System.Windows.Forms.ListBox();
             this.labelRuntime = new System.Windows.Forms.Label();
             this.labellinkPath = new System.Windows.Forms.Label();
@@ -77,7 +78,7 @@
             this.labelNameApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.labelNameApp.Location = new System.Drawing.Point(105, 16);
             this.labelNameApp.Name = "labelNameApp";
-            this.labelNameApp.Size = new System.Drawing.Size(196, 36);
+            this.labelNameApp.Size = new System.Drawing.Size(245, 42);
             this.labelNameApp.TabIndex = 13;
             this.labelNameApp.Text = "MesinPencari";
             // 
@@ -97,11 +98,12 @@
             this.testing.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.testing.Cursor = System.Windows.Forms.Cursors.No;
             this.testing.FormattingEnabled = true;
-            this.testing.ItemHeight = 15;
+            this.testing.ItemHeight = 18;
             this.testing.Location = new System.Drawing.Point(29, 427);
             this.testing.Name = "testing";
             this.testing.Size = new System.Drawing.Size(572, 90);
             this.testing.TabIndex = 1;
+            this.testing.Visible = false;
             // 
             // radioButtonBfs
             // 
@@ -111,7 +113,7 @@
             this.radioButtonBfs.ForeColor = System.Drawing.Color.White;
             this.radioButtonBfs.Location = new System.Drawing.Point(29, 316);
             this.radioButtonBfs.Name = "radioButtonBfs";
-            this.radioButtonBfs.Size = new System.Drawing.Size(59, 24);
+            this.radioButtonBfs.Size = new System.Drawing.Size(72, 29);
             this.radioButtonBfs.TabIndex = 3;
             this.radioButtonBfs.TabStop = true;
             this.radioButtonBfs.Text = "BFS";
@@ -125,7 +127,7 @@
             this.radioButtonDfs.ForeColor = System.Drawing.Color.White;
             this.radioButtonDfs.Location = new System.Drawing.Point(119, 316);
             this.radioButtonDfs.Name = "radioButtonDfs";
-            this.radioButtonDfs.Size = new System.Drawing.Size(60, 24);
+            this.radioButtonDfs.Size = new System.Drawing.Size(73, 29);
             this.radioButtonDfs.TabIndex = 4;
             this.radioButtonDfs.TabStop = true;
             this.radioButtonDfs.Text = "DFS";
@@ -182,7 +184,7 @@
             this.labelInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.labelInput.Location = new System.Drawing.Point(28, 13);
             this.labelInput.Name = "labelInput";
-            this.labelInput.Size = new System.Drawing.Size(93, 37);
+            this.labelInput.Size = new System.Drawing.Size(112, 46);
             this.labelInput.TabIndex = 6;
             this.labelInput.Text = "Input";
             // 
@@ -194,7 +196,7 @@
             this.labelInputFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.labelInputFile.Location = new System.Drawing.Point(29, 210);
             this.labelInputFile.Name = "labelInputFile";
-            this.labelInputFile.Size = new System.Drawing.Size(143, 24);
+            this.labelInputFile.Size = new System.Drawing.Size(183, 29);
             this.labelInputFile.TabIndex = 8;
             this.labelInputFile.Text = "Input File Name";
             // 
@@ -202,7 +204,7 @@
             // 
             this.textBoxInputFileName.Location = new System.Drawing.Point(30, 245);
             this.textBoxInputFileName.Name = "textBoxInputFileName";
-            this.textBoxInputFileName.Size = new System.Drawing.Size(222, 21);
+            this.textBoxInputFileName.Size = new System.Drawing.Size(222, 24);
             this.textBoxInputFileName.TabIndex = 9;
             // 
             // buttonSearch
@@ -240,7 +242,7 @@
             this.labelFolderPath.MaximumSize = new System.Drawing.Size(450, 0);
             this.labelFolderPath.MinimumSize = new System.Drawing.Size(338, 0);
             this.labelFolderPath.Name = "labelFolderPath";
-            this.labelFolderPath.Size = new System.Drawing.Size(338, 15);
+            this.labelFolderPath.Size = new System.Drawing.Size(338, 18);
             this.labelFolderPath.TabIndex = 9;
             this.labelFolderPath.Text = "No File Choosen..";
             // 
@@ -252,7 +254,7 @@
             this.labelChooseFolder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.labelChooseFolder.Location = new System.Drawing.Point(1, 9);
             this.labelChooseFolder.Name = "labelChooseFolder";
-            this.labelChooseFolder.Size = new System.Drawing.Size(184, 24);
+            this.labelChooseFolder.Size = new System.Drawing.Size(238, 29);
             this.labelChooseFolder.TabIndex = 7;
             this.labelChooseFolder.Text = "Choose File directori";
             // 
@@ -302,7 +304,7 @@
             this.checkBoxFindAll.ForeColor = System.Drawing.SystemColors.Control;
             this.checkBoxFindAll.Location = new System.Drawing.Point(29, 278);
             this.checkBoxFindAll.Name = "checkBoxFindAll";
-            this.checkBoxFindAll.Size = new System.Drawing.Size(147, 22);
+            this.checkBoxFindAll.Size = new System.Drawing.Size(178, 26);
             this.checkBoxFindAll.TabIndex = 16;
             this.checkBoxFindAll.Text = "Find all occurence";
             this.checkBoxFindAll.UseVisualStyleBackColor = false;
@@ -312,6 +314,7 @@
             this.panelOutput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelOutput.BackColor = System.Drawing.Color.Transparent;
+            this.panelOutput.Controls.Add(this.labelPathnoFile);
             this.panelOutput.Controls.Add(this.listLinkPath);
             this.panelOutput.Controls.Add(this.labelRuntime);
             this.panelOutput.Controls.Add(this.labellinkPath);
@@ -322,6 +325,17 @@
             this.panelOutput.TabIndex = 15;
             this.panelOutput.Visible = false;
             // 
+            // labelPathnoFile
+            // 
+            this.labelPathnoFile.AutoSize = true;
+            this.labelPathnoFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPathnoFile.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelPathnoFile.Location = new System.Drawing.Point(4, 34);
+            this.labelPathnoFile.Name = "labelPathnoFile";
+            this.labelPathnoFile.Size = new System.Drawing.Size(91, 22);
+            this.labelPathnoFile.TabIndex = 18;
+            this.labelPathnoFile.Text = "Path File :";
+            // 
             // listLinkPath
             // 
             this.listLinkPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
@@ -330,12 +344,12 @@
             this.listLinkPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.listLinkPath.ForeColor = System.Drawing.Color.Aquamarine;
             this.listLinkPath.FormattingEnabled = true;
-            this.listLinkPath.ItemHeight = 15;
+            this.listLinkPath.ItemHeight = 18;
             this.listLinkPath.Location = new System.Drawing.Point(11, 37);
             this.listLinkPath.MaximumSize = new System.Drawing.Size(593, 90);
             this.listLinkPath.MinimumSize = new System.Drawing.Size(200, 30);
             this.listLinkPath.Name = "listLinkPath";
-            this.listLinkPath.Size = new System.Drawing.Size(593, 60);
+            this.listLinkPath.Size = new System.Drawing.Size(593, 54);
             this.listLinkPath.TabIndex = 17;
             this.listLinkPath.SelectedIndexChanged += new System.EventHandler(this.listLinkPath_SelectedIndexChanged);
             // 
@@ -346,7 +360,7 @@
             this.labelRuntime.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.labelRuntime.Location = new System.Drawing.Point(133, 138);
             this.labelRuntime.Name = "labelRuntime";
-            this.labelRuntime.Size = new System.Drawing.Size(18, 20);
+            this.labelRuntime.Size = new System.Drawing.Size(23, 25);
             this.labelRuntime.TabIndex = 3;
             this.labelRuntime.Text = "0";
             // 
@@ -357,7 +371,7 @@
             this.labellinkPath.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.labellinkPath.Location = new System.Drawing.Point(3, 9);
             this.labellinkPath.Name = "labellinkPath";
-            this.labellinkPath.Size = new System.Drawing.Size(79, 20);
+            this.labellinkPath.Size = new System.Drawing.Size(99, 25);
             this.labellinkPath.TabIndex = 2;
             this.labellinkPath.Text = "Path File :";
             // 
@@ -368,7 +382,7 @@
             this.labelTime.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.labelTime.Location = new System.Drawing.Point(3, 138);
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(98, 20);
+            this.labelTime.Size = new System.Drawing.Size(124, 25);
             this.labelTime.TabIndex = 1;
             this.labelTime.Text = "Time Spent :";
             // 
@@ -382,7 +396,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -437,5 +451,6 @@
         private Label labelRuntime;
         private CheckBox checkBoxFindAll;
         private ListBox listLinkPath;
+        private Label labelPathnoFile;
     }
 }

@@ -46,7 +46,7 @@ namespace src
             Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
 
-            if (fileSearch != null && folder != "No File Choosen..")
+            if (fileSearch != "" && folder != "No File Choosen.." && (radioButtonBfs.Checked || radioButtonDfs.Checked))
             {
                 // Membersihkan data sebelumnya
                 panelOutput.Visible = false;
@@ -86,12 +86,15 @@ namespace src
                 // Tampilan ditemukan atau tidak
                 if (result.Count == 0){
                     testing.Items.Add("Tidak ditemukan file dengan nama " + fileSearch);
+                    labelPathnoFile.Text = "Tidak ditemukan file dengan nama " + fileSearch;
+                    listLinkPath.Visible = false;
                 }
                 else {
                     foreach (string res in result) {
                         testing.Items.Add(res);
                         listLinkPath.Items.Add(res);
                     }
+                    labelPathnoFile.Visible = false;
                 }
                 labelRuntime.Text = $"{watch.ElapsedMilliseconds} ms";
                 panelOutput.Visible = true;
