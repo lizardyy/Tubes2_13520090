@@ -59,7 +59,7 @@ namespace src
                 List<string> pengecekan = new List<string>();
                 string[] splitPath;
                 // flag untuk pewarnaan graf
-                bool colorize = true;
+                bool colorize = true; 
 
                 // Mengambil root node (folder pencarian)
                 splitPath = folder.Split("\\");
@@ -88,6 +88,7 @@ namespace src
                     testing.Items.Add("Tidak ditemukan file dengan nama " + fileSearch);
                     labelPathnoFile.Text = "Tidak ditemukan file dengan nama " + fileSearch;
                     listLinkPath.Visible = false;
+                    labelPathnoFile.Visible = true;
                 }
                 else {
                     foreach (string res in result) {
@@ -95,6 +96,7 @@ namespace src
                         listLinkPath.Items.Add(res);
                     }
                     labelPathnoFile.Visible = false;
+                    listLinkPath.Visible = true;
                 }
                 labelRuntime.Text = $"{watch.ElapsedMilliseconds} ms";
                 panelOutput.Visible = true;
