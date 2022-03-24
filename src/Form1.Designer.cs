@@ -44,19 +44,17 @@
             this.labelChooseFolder = new System.Windows.Forms.Label();
             this.buttonChooseFolder = new System.Windows.Forms.Button();
             this.panelMain = new src.GradientPanel();
-            this.checkBoxFindAll = new System.Windows.Forms.CheckBox();
-            this.panelOutput = new System.Windows.Forms.Panel();
-            this.labelPathnoFile = new System.Windows.Forms.Label();
-            this.listLinkPath = new System.Windows.Forms.ListBox();
             this.labelRuntime = new System.Windows.Forms.Label();
-            this.labellinkPath = new System.Windows.Forms.Label();
+            this.labelPathnoFile = new System.Windows.Forms.Label();
             this.labelTime = new System.Windows.Forms.Label();
+            this.labellinkPath = new System.Windows.Forms.Label();
+            this.checkBoxFindAll = new System.Windows.Forms.CheckBox();
+            this.listLinkPath = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoApp)).BeginInit();
             this.panelChooseFile.SuspendLayout();
             this.panelMain.SuspendLayout();
-            this.panelOutput.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelHeader
@@ -68,7 +66,7 @@
             this.panelHeader.Controls.Add(this.logoApp);
             this.panelHeader.Location = new System.Drawing.Point(-1, 1);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1400, 70);
+            this.panelHeader.Size = new System.Drawing.Size(1416, 70);
             this.panelHeader.TabIndex = 11;
             // 
             // labelNameApp
@@ -101,7 +99,7 @@
             this.testing.ItemHeight = 18;
             this.testing.Location = new System.Drawing.Point(29, 427);
             this.testing.Name = "testing";
-            this.testing.Size = new System.Drawing.Size(572, 90);
+            this.testing.Size = new System.Drawing.Size(37, 0);
             this.testing.TabIndex = 1;
             this.testing.Visible = false;
             // 
@@ -111,7 +109,7 @@
             this.radioButtonBfs.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonBfs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radioButtonBfs.ForeColor = System.Drawing.Color.White;
-            this.radioButtonBfs.Location = new System.Drawing.Point(29, 316);
+            this.radioButtonBfs.Location = new System.Drawing.Point(29, 320);
             this.radioButtonBfs.Name = "radioButtonBfs";
             this.radioButtonBfs.Size = new System.Drawing.Size(72, 29);
             this.radioButtonBfs.TabIndex = 3;
@@ -125,7 +123,7 @@
             this.radioButtonDfs.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonDfs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radioButtonDfs.ForeColor = System.Drawing.Color.White;
-            this.radioButtonDfs.Location = new System.Drawing.Point(119, 316);
+            this.radioButtonDfs.Location = new System.Drawing.Point(115, 320);
             this.radioButtonDfs.Name = "radioButtonDfs";
             this.radioButtonDfs.Size = new System.Drawing.Size(73, 29);
             this.radioButtonDfs.TabIndex = 4;
@@ -152,7 +150,7 @@
             this.gViewer1.InsertingEdge = false;
             this.gViewer1.LayoutAlgorithmSettingsButtonVisible = true;
             this.gViewer1.LayoutEditingEnabled = true;
-            this.gViewer1.Location = new System.Drawing.Point(629, 93);
+            this.gViewer1.Location = new System.Drawing.Point(556, 93);
             this.gViewer1.LooseOffsetForRouting = 0.25D;
             this.gViewer1.MouseHitDistance = 0.05D;
             this.gViewer1.Name = "gViewer1";
@@ -166,7 +164,7 @@
             this.gViewer1.SaveButtonVisible = true;
             this.gViewer1.SaveGraphButtonVisible = true;
             this.gViewer1.SaveInVectorFormatEnabled = true;
-            this.gViewer1.Size = new System.Drawing.Size(619, 396);
+            this.gViewer1.Size = new System.Drawing.Size(708, 412);
             this.gViewer1.TabIndex = 5;
             this.gViewer1.TightOffsetForRouting = 0.125D;
             this.gViewer1.ToolBarIsVisible = true;
@@ -194,7 +192,7 @@
             this.labelInputFile.BackColor = System.Drawing.Color.Transparent;
             this.labelInputFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelInputFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.labelInputFile.Location = new System.Drawing.Point(29, 210);
+            this.labelInputFile.Location = new System.Drawing.Point(27, 209);
             this.labelInputFile.Name = "labelInputFile";
             this.labelInputFile.Size = new System.Drawing.Size(183, 29);
             this.labelInputFile.TabIndex = 8;
@@ -212,7 +210,7 @@
             this.buttonSearch.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSearch.ForeColor = System.Drawing.Color.Black;
-            this.buttonSearch.Location = new System.Drawing.Point(28, 359);
+            this.buttonSearch.Location = new System.Drawing.Point(28, 363);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(164, 43);
             this.buttonSearch.TabIndex = 10;
@@ -228,7 +226,7 @@
             this.panelChooseFile.Controls.Add(this.buttonChooseFolder);
             this.panelChooseFile.Location = new System.Drawing.Point(28, 93);
             this.panelChooseFile.Name = "panelChooseFile";
-            this.panelChooseFile.Size = new System.Drawing.Size(576, 99);
+            this.panelChooseFile.Size = new System.Drawing.Size(466, 99);
             this.panelChooseFile.TabIndex = 12;
             // 
             // labelFolderPath
@@ -278,8 +276,12 @@
             this.panelMain.Angle = 0F;
             this.panelMain.BackColor = System.Drawing.Color.White;
             this.panelMain.BottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(40)))), ((int)(((byte)(76)))));
+            this.panelMain.Controls.Add(this.labelRuntime);
+            this.panelMain.Controls.Add(this.labelPathnoFile);
+            this.panelMain.Controls.Add(this.labelTime);
+            this.panelMain.Controls.Add(this.labellinkPath);
             this.panelMain.Controls.Add(this.checkBoxFindAll);
-            this.panelMain.Controls.Add(this.panelOutput);
+            this.panelMain.Controls.Add(this.listLinkPath);
             this.panelMain.Controls.Add(this.panel2);
             this.panelMain.Controls.Add(this.gViewer1);
             this.panelMain.Controls.Add(this.buttonSearch);
@@ -292,9 +294,69 @@
             this.panelMain.Controls.Add(this.labelInputFile);
             this.panelMain.Location = new System.Drawing.Point(46, 112);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1298, 680);
+            this.panelMain.Size = new System.Drawing.Size(1314, 707);
             this.panelMain.TabIndex = 15;
             this.panelMain.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(40)))), ((int)(((byte)(72)))));
+            // 
+            // labelRuntime
+            // 
+            this.labelRuntime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRuntime.AutoSize = true;
+            this.labelRuntime.BackColor = System.Drawing.Color.Transparent;
+            this.labelRuntime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelRuntime.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelRuntime.Location = new System.Drawing.Point(686, 519);
+            this.labelRuntime.Name = "labelRuntime";
+            this.labelRuntime.Size = new System.Drawing.Size(23, 25);
+            this.labelRuntime.TabIndex = 3;
+            this.labelRuntime.Text = "0";
+            this.labelRuntime.Visible = false;
+            // 
+            // labelPathnoFile
+            // 
+            this.labelPathnoFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelPathnoFile.AutoSize = true;
+            this.labelPathnoFile.BackColor = System.Drawing.Color.Transparent;
+            this.labelPathnoFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPathnoFile.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelPathnoFile.Location = new System.Drawing.Point(28, 466);
+            this.labelPathnoFile.Name = "labelPathnoFile";
+            this.labelPathnoFile.Size = new System.Drawing.Size(91, 22);
+            this.labelPathnoFile.TabIndex = 18;
+            this.labelPathnoFile.Text = "Path File :";
+            this.labelPathnoFile.Visible = false;
+            // 
+            // labelTime
+            // 
+            this.labelTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTime.AutoSize = true;
+            this.labelTime.BackColor = System.Drawing.Color.Transparent;
+            this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTime.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelTime.Location = new System.Drawing.Point(556, 519);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(124, 25);
+            this.labelTime.TabIndex = 1;
+            this.labelTime.Text = "Time Spent :";
+            this.labelTime.Visible = false;
+            // 
+            // labellinkPath
+            // 
+            this.labellinkPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.labellinkPath.AutoSize = true;
+            this.labellinkPath.BackColor = System.Drawing.Color.Transparent;
+            this.labellinkPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labellinkPath.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labellinkPath.Location = new System.Drawing.Point(25, 430);
+            this.labellinkPath.Name = "labellinkPath";
+            this.labellinkPath.Size = new System.Drawing.Size(99, 25);
+            this.labellinkPath.TabIndex = 2;
+            this.labellinkPath.Text = "Path File :";
+            this.labellinkPath.Visible = false;
             // 
             // checkBoxFindAll
             // 
@@ -302,42 +364,17 @@
             this.checkBoxFindAll.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxFindAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBoxFindAll.ForeColor = System.Drawing.SystemColors.Control;
-            this.checkBoxFindAll.Location = new System.Drawing.Point(29, 278);
+            this.checkBoxFindAll.Location = new System.Drawing.Point(30, 283);
             this.checkBoxFindAll.Name = "checkBoxFindAll";
             this.checkBoxFindAll.Size = new System.Drawing.Size(178, 26);
             this.checkBoxFindAll.TabIndex = 16;
             this.checkBoxFindAll.Text = "Find all occurence";
             this.checkBoxFindAll.UseVisualStyleBackColor = false;
             // 
-            // panelOutput
-            // 
-            this.panelOutput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelOutput.BackColor = System.Drawing.Color.Transparent;
-            this.panelOutput.Controls.Add(this.labelPathnoFile);
-            this.panelOutput.Controls.Add(this.listLinkPath);
-            this.panelOutput.Controls.Add(this.labelRuntime);
-            this.panelOutput.Controls.Add(this.labellinkPath);
-            this.panelOutput.Controls.Add(this.labelTime);
-            this.panelOutput.Location = new System.Drawing.Point(629, 495);
-            this.panelOutput.Name = "panelOutput";
-            this.panelOutput.Size = new System.Drawing.Size(619, 182);
-            this.panelOutput.TabIndex = 15;
-            this.panelOutput.Visible = false;
-            // 
-            // labelPathnoFile
-            // 
-            this.labelPathnoFile.AutoSize = true;
-            this.labelPathnoFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPathnoFile.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelPathnoFile.Location = new System.Drawing.Point(4, 34);
-            this.labelPathnoFile.Name = "labelPathnoFile";
-            this.labelPathnoFile.Size = new System.Drawing.Size(91, 22);
-            this.labelPathnoFile.TabIndex = 18;
-            this.labelPathnoFile.Text = "Path File :";
-            // 
             // listLinkPath
             // 
+            this.listLinkPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.listLinkPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
             this.listLinkPath.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listLinkPath.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -345,51 +382,19 @@
             this.listLinkPath.ForeColor = System.Drawing.Color.Aquamarine;
             this.listLinkPath.FormattingEnabled = true;
             this.listLinkPath.ItemHeight = 18;
-            this.listLinkPath.Location = new System.Drawing.Point(11, 37);
-            this.listLinkPath.MaximumSize = new System.Drawing.Size(593, 90);
+            this.listLinkPath.Location = new System.Drawing.Point(28, 466);
+            this.listLinkPath.MaximumSize = new System.Drawing.Size(500, 300);
             this.listLinkPath.MinimumSize = new System.Drawing.Size(200, 30);
             this.listLinkPath.Name = "listLinkPath";
-            this.listLinkPath.Size = new System.Drawing.Size(593, 54);
+            this.listLinkPath.Size = new System.Drawing.Size(466, 216);
             this.listLinkPath.TabIndex = 17;
+            this.listLinkPath.Visible = false;
             this.listLinkPath.SelectedIndexChanged += new System.EventHandler(this.listLinkPath_SelectedIndexChanged);
-            // 
-            // labelRuntime
-            // 
-            this.labelRuntime.AutoSize = true;
-            this.labelRuntime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelRuntime.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelRuntime.Location = new System.Drawing.Point(133, 138);
-            this.labelRuntime.Name = "labelRuntime";
-            this.labelRuntime.Size = new System.Drawing.Size(23, 25);
-            this.labelRuntime.TabIndex = 3;
-            this.labelRuntime.Text = "0";
-            // 
-            // labellinkPath
-            // 
-            this.labellinkPath.AutoSize = true;
-            this.labellinkPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labellinkPath.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labellinkPath.Location = new System.Drawing.Point(3, 9);
-            this.labellinkPath.Name = "labellinkPath";
-            this.labellinkPath.Size = new System.Drawing.Size(99, 25);
-            this.labellinkPath.TabIndex = 2;
-            this.labellinkPath.Text = "Path File :";
-            // 
-            // labelTime
-            // 
-            this.labelTime.AutoSize = true;
-            this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTime.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelTime.Location = new System.Drawing.Point(3, 138);
-            this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(124, 25);
-            this.labelTime.TabIndex = 1;
-            this.labelTime.Text = "Time Spent :";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.panel2.Location = new System.Drawing.Point(34, 61);
+            this.panel2.Location = new System.Drawing.Point(34, 69);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(460, 4);
             this.panel2.TabIndex = 13;
@@ -400,7 +405,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1390, 834);
+            this.ClientSize = new System.Drawing.Size(1406, 861);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelHeader);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -415,8 +420,6 @@
             this.panelChooseFile.PerformLayout();
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
-            this.panelOutput.ResumeLayout(false);
-            this.panelOutput.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -445,7 +448,6 @@
         private GradientPanel panelMain;
         private Label labelFolderPath;
         private Panel panel2;
-        private Panel panelOutput;
         private Label labellinkPath;
         private Label labelTime;
         private Label labelRuntime;

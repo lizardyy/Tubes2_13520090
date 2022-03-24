@@ -49,7 +49,6 @@ namespace src
             if (fileSearch != "" && folder != "No File Choosen.." && (radioButtonBfs.Checked || radioButtonDfs.Checked))
             {
                 // Membersihkan data sebelumnya
-                panelOutput.Visible = false;
                 testing.Items.Clear();
                 listLinkPath.Items.Clear();
                 BFS.pengecekan.Clear();
@@ -99,7 +98,12 @@ namespace src
                     listLinkPath.Visible = true;
                 }
                 labelRuntime.Text = $"{watch.ElapsedMilliseconds} ms";
-                panelOutput.Visible = true;
+                /*panelOutput.Visible = true;*/
+
+                // active all output
+                labellinkPath.Visible = true;
+                labelTime.Visible = true;
+                labelRuntime.Visible = true;
 
                 // Algoritma untuk membuat graph dari pengecekan
                 // Menambahkan node root pada folder pencarian
@@ -199,6 +203,5 @@ namespace src
                 Process.Start(psi);
             }
         }
-
     }
 }
