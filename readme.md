@@ -23,15 +23,16 @@ KELOMPOK mesinPencari
 4. Kemudian klik logo run yang terdapat pada menu bar visual studio atau dapat menekan tombol f5 pada keyboard untuk menjalankan program
 
 ## Cara Penggunaan
+1. klik logo run pada visual studio atau dapat langsung double klik pada **src.exe** yang terdapat pada folder bin
 
-1. pilih folder yang akan dijadikan sebagai _starting directory_ dengan melakukan klik pada button Change Folder
+3. pilih folder yang akan dijadikan sebagai _starting directory_ dengan melakukan klik pada button Change Folder
 
-2. masukan nama file name yang akan dicari pada textbox input file name
+3. masukan nama file name yang akan dicari pada textbox input file name
 
-3. pilih algoritma yang akan digunakan dengan klik salah satu dari 2 radio button BFS / DFS
+4. pilih algoritma yang akan digunakan dengan klik salah satu dari 2 radio button BFS / DFS
 
-4. jika ingin mencari seluruh file yang ada pada folder dapat mencentang pada bagian _find all Occurence_ **(Opsional)**
+5. jika ingin mencari seluruh file yang ada pada folder dapat mencentang pada bagian _find all Occurence_ **(Opsional)**
 
-5. Klik button search untuk melakukan pencarian
+6. Klik button search untuk melakukan pencarian
 
-6. jika langkah 1,2, dan 3 sudah terpenuhi maka akan ditampilkan hasil berupa graf dari pencarian dan list path yang jika di klik akan meng-_hyperlink_ ke file exproler
+7. jika langkah 1,2, dan 3 sudah terpenuhi maka akan ditampilkan hasil berupa graf dari pencarian dan list path yang jika di klik akan meng-_hyperlink_ ke file exproler
