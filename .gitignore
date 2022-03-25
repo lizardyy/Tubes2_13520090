@@ -1,3 +1,4 @@
 .vs
-src/bin
+src/bin/Debug
+src/bin/Release
 src/obj
